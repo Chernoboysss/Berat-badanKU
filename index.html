@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Berat BadanKU</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//100/MTA-6852835/camry_timbangan_badan_manual_merk_camry_full02_tdkvmfob.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+      <img src="assets/img/gambar-timbangan.webp" alt="">
+      <div class="container" data-aos="zoom-out">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h2 class="text-center">Yukk Hitung Berat Badan</h2>
+            <p class="text-center">Berat badan kamu kemarin <b><span id="date-span-yesterday"></span></b> </p>
+
+            <h1 id="weight-display" class="text-center text-bg-danger">45 Kg</h1>
+            <p class="mt-5 text-center">Berat badan ideal = Berat badan (kilogram): Tinggi badan (meter)
+              <br>Setelah menemukan berat badan ideal, kamu bisa mulai membiasakan pola hidup sehat dengan memenuhi asupan gizi harian tubuh.
+              Selain itu, kamu juga harus menjaga kebugaran dengan rutin berolahraga dan mengonsumsi banyak air putih.</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Input Berat Badan</h2>
+        <p>Input Berat badan untuk hari ini yaa</p>
+        <p>Hari Ini <span id="date-span"></span></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade" data-aos-delay="100">
+        <div class="col-lg-12">
+          <form id="weight-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-md-12">
+                <input type="number" class="form-control" id="weight-input" name="subject" placeholder="Masukkan berat badan" required="">
+              </div>
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <!-- <div class="error-message"></div> -->
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <button type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div><!-- End Contact Form -->
+      </div>
+    </section><!-- /Contact Section -->
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Modal for Password -->
+  <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="passwordModalLabel">Enter Password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="password" id="password-input" class="form-control" placeholder="Enter password" required>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="password-submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="password-alert" style="display: none;">
+          Password salah.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Alert for Wrong Password -->
+ 
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function updateYesterdayDate() {
+      const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+      const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+      const now = new Date();
+      now.setDate(now.getDate() - 1);
+      const day = days[now.getDay()];
+      const date = now.getDate();
+      const month = months[now.getMonth()];
+      const year = now.getFullYear();
+
+      const fullDate = `${day}, ${date} ${month} ${year}`;
+      document.getElementById('date-span-yesterday').textContent = fullDate;
+    }
+
+    // Panggil fungsi updateDate dan updateYesterdayDate saat halaman dimuat
+    updateYesterdayDate();
+
+    function updateDate() {
+      const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+      const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+      const now = new Date();
+      const day = days[now.getDay()];
+      const date = now.getDate();
+      const month = months[now.getMonth()];
+      const year = now.getFullYear();
+
+      const fullDate = `${day}, ${date} ${month} ${year}`;
+      document.getElementById('date-span').textContent = fullDate;
+    }
+
+    // Panggil fungsi updateDate saat halaman dimuat
+    updateDate();
+
+    const correctPassword = "Chernobyl"; // Ganti dengan password yang benar
+
+    // Fungsi untuk membaca berat badan dari localStorage dan memperbarui elemen HTML
+    function updateWeight() {
+      const savedWeight = localStorage.getItem('weight');
+      if (savedWeight) {
+        document.getElementById('weight-display').textContent = savedWeight + ' Kg';
+      }
+    }
+
+    // Panggil fungsi untuk memperbarui berat badan saat halaman dimuat
+    updateWeight();
+
+    // Event listener untuk form submit
+    document.getElementById('weight-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const weight = document.getElementById('weight-input').value;
+      // Simpan nilai berat ke localStorage sementara
+      localStorage.setItem('tempWeight', weight);
+      // Tampilkan modal
+      const passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'));
+      passwordModal.show();
+    });
+
+    // Event listener untuk tombol submit di modal password
+    document.getElementById('password-submit').addEventListener('click', function() {
+      const password = document.getElementById('password-input').value;
+      if (password === correctPassword) {
+        const weight = localStorage.getItem('tempWeight');
+        localStorage.setItem('weight', weight);
+        document.getElementById('weight-display').textContent = weight + ' Kg';
+        window.location.reload();
+      } else {
+        // Tampilkan Bootstrap alert untuk password salah
+        const passwordAlert = document.getElementById('password-alert');
+        passwordAlert.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+
+</html>
